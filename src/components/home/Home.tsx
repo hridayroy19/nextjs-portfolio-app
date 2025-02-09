@@ -1,8 +1,9 @@
+import Hero from "./Hero";
 
 const HomePage = () => {
     return (
         <div className="overflow-hidden">
-            homedddd
+            <Hero/>
         </div>
     );
 };
