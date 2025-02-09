@@ -3,7 +3,7 @@ import { FaGoogle } from "react-icons/fa";
 
 const page = () => {
   return (
-    <div className="bg-[#240b39e0] py-24 md:py-32 text-white lg:px-14 px-5">
+    <div className="bg-[#0f0715] py-24 md:py-32 text-white lg:px-14 px-5">
       <div className="flex items-center justify-center">
         <div className="bg-[#240b39c0]  px-6 py-8 rounded-xl shadow-lg max-w-md w-full transition-transform transform hover:scale-105">
           <div className="text-center mb-6">
@@ -55,7 +55,7 @@ const page = () => {
               </label>
             </div>
             <div className="flex flex-col sm:flex-row sm:items-center sm:gap-4">
-              <button className="w-full px-6 sm:w-auto inline-block rounded-md bg-[#240b39] py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#240b39] border border-[#240b39] focus:outline-none">
+              <button className="w-full px-6 sm:w-auto inline-block rounded-md bg-[#240b39] py-3 text-sm font-medium text-white transition hover:bg-transparent hover:text-[#f6f5f7] border border-[#240b39] focus:outline-none">
                 Login
               </button>
 
