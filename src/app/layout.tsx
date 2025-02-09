@@ -15,10 +15,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <ResponsiveNav/>
+        <ResponsiveNav />
         {children}
-        
-        </body>
+      </body>
     </html>
   );
 }
