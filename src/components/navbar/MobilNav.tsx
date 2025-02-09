@@ -12,7 +12,7 @@ const MobilNav = ({ showNav, closeNav }: Props) => {
     <div>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-[1000] w-full h-screen bg-black opacity-70 transition-opacity duration-500 ${
+        className={`fixed hidden inset-0 z-[1000] w-full h-screen bg-black opacity-70 transition-opacity duration-500 ${
           showNav ? "opacity-70 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
         onClick={closeNav}

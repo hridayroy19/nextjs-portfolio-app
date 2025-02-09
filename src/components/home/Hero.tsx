@@ -26,13 +26,12 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div>
+        <div className="w-full lg:w-1/2 relative h-[400px]">
           <Image
             src={BaseInfo.profilePic}
-            width={400}
-            height={400}
             alt="photo"
-            className="w-full h-auto rounded-lg"
+            fill
+            className="rounded-lg object-cover"
           />
         </div>
       </div>
