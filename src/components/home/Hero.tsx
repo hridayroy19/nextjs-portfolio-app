@@ -26,7 +26,7 @@ const Hero = () => {
         </div>
 
         {/* Image Section */}
-        <div className="w-full lg:w-1/2 relative h-[400px]">
+        <div className="w-full lg:w-10/12 relative h-[400px]">
           <Image
             src={BaseInfo.profilePic}
             alt="photo"

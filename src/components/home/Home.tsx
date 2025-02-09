@@ -1,3 +1,4 @@
+import Blog from "../blogCart/Blog";
 import Hero from "./Hero";
 import Project from "./project/Project";
 import Skill from "./skills/Skill";
@@ -8,6 +9,7 @@ const HomePage = () => {
             <Hero/>
             <Project/>
             <Skill/>
+            <Blog/>
         </div>
     );
 };

@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import { navLinks } from "../../../constant/constant";
 import Link from "next/link";
 import { HiBars3BottomLeft } from "react-icons/hi2";
@@ -35,14 +34,7 @@ const Nav = ({ openNav }: props) => {
       } h-[12vh] z-[10] w-full transition-all duration-200 `}
     >
       <div className=" flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto ">
-        {/* logo */}
-        <Image
-          src="/images/logo.png"
-          alt="logo"
-          width={170}
-          height={170}
-          className=" ml-[-1.5rem] sm:ml-0"
-        />
+        <h1 className="text-2xl  text-white ml-[-1.5rem] sm:ml-0">HR ID AY</h1>
         <div className=" flex items-center space-x-10">
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((navlink) => {
@@ -55,7 +47,9 @@ const Nav = ({ openNav }: props) => {
           </div>
           {/* button */}
           <div className=" flex items-center space-x-4">
-            <button className="">Hire Me </button>
+            <button className=" text-white border-2 px-2 text-sm ">
+              LogIn{" "}
+            </button>
             {/* mobil devic menu icon */}
             <HiBars3BottomLeft
               onClick={openNav}
