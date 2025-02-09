@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ResponsiveNav from "@/components/navbar/ResponsiveNav";
+import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
   title: "Hridoy Portfolio App",
@@ -17,6 +18,7 @@ export default function RootLayout({
       <body>
         <ResponsiveNav />
         {children}
+        <Footer/>
       </body>
     </html>
   );
