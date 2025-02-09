@@ -2,6 +2,7 @@ import Image from "next/image";
 
 import { navLinks } from "../../../constant/constant";
 import Link from "next/link";
+import { HiBars3BottomLeft } from "react-icons/hi2";
 
 const Nav = () => {
   return (
@@ -16,15 +17,21 @@ const Nav = () => {
           className=" ml-[-1.5rem] sm:ml-0"
         />
         <div className=" flex items-center space-x-10">
-          {
-            navLinks.map((navlink)=>{
-                return (
-                    <Link key={navlink.id} href={navlink.url} >
-                        <p className="nav_link">{navlink.label}</p>
-                    </Link>
-                )
-            })
-          }
+          <div className="hidden lg:flex items-center space-x-8">
+            {navLinks.map((navlink) => {
+              return (
+                <Link key={navlink.id} href={navlink.url}>
+                  <p className="nav_link">{navlink.label}</p>
+                </Link>
+              );
+            })}
+          </div>
+          {/* button */}
+          <div className=" flex items-center space-x-4">
+            <button className="">Hire Me </button>
+            {/* mobil devic menu icon */}
+            <HiBars3BottomLeft className=" w-8 h-8 cursor-pointer lg:hidden text-white" />
+          </div>
         </div>
       </div>
     </div>
