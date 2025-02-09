@@ -8,9 +8,8 @@ const Blog = () => {
       <div className="w-[88%] mx-auto mt-14 gap-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 items-center ">
         {blogs.map((blog) => {
           return (
-            <div key={blog.id}>
-              {" "}
-              <BlogCart blog={blog} />{" "}
+            <div key={blog.id}>            
+              <BlogCart blog={blog} />
             </div>
           );
         })}

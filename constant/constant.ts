@@ -19,4 +19,9 @@ export const navLinks = [
     url: "/contact",
     label: "Contacts",
   },
+  {
+    id: 5,
+    url: "/dashboard",
+    label: "Dashboard",
+  },
 ];

@@ -31,8 +31,8 @@ const BlogCart = ({ blog }: props) => {
         <div className="w-full border mt-2"></div>
         <p className="text-white text-xs flex justify-between mt-2">
           {blog.date}
-          <span className="font-medium hover:underline cursor-pointer text-[15px]">
-            Read More
+          <span className="font-medium hover:bg-gray-500 border p-1 cursor-pointer text-[15px]">
+          Detailed
           </span>
         </p>
       </div>
