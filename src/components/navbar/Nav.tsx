@@ -1,16 +1,39 @@
+"use client";
 import Image from "next/image";
-
 import { navLinks } from "../../../constant/constant";
 import Link from "next/link";
 import { HiBars3BottomLeft } from "react-icons/hi2";
+import { useEffect, useState } from "react";
 //props type
 type props = {
   openNav: () => void;
 };
 
 const Nav = ({ openNav }: props) => {
+  const [navBg, setNavBg] = useState(false);
+
+  useEffect(() => {
+    const handler = () => {
+      if (window.scrollY >= 90) {
+        setNavBg(true);
+      }
+      if (window.scrollY < 90) {
+        setNavBg(false);
+      }
+    };
+
+    window.addEventListener("scroll", handler);
+    return () => {
+      window.removeEventListener("scroll", handler);
+    };
+  }, []);
+
   return (
-    <div className=" fixed h-[12vh] z-[10] bg-blue-900 w-full ">
+    <div
+      className={`fixed ${
+        navBg ? "bg-[#240b39]" : "fixed"
+      } h-[12vh] z-[10] w-full transition-all duration-200 `}
+    >
       <div className=" flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto ">
         {/* logo */}
         <Image
