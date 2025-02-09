@@ -47,9 +47,9 @@ const Nav = ({ openNav }: props) => {
           </div>
           {/* button */}
           <div className=" flex items-center space-x-4">
-            <button className=" text-white border-2 px-2 text-sm ">
-              LogIn{" "}
-            </button>
+           <Link href="/login"> <button className=" text-white border-2 px-2 text-sm ">
+              LogIn
+            </button></Link>
             {/* mobil devic menu icon */}
             <HiBars3BottomLeft
               onClick={openNav}
