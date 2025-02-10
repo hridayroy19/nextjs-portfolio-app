@@ -3,6 +3,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { FaCog, FaHome, FaBars, FaTimes } from "react-icons/fa";
 import { IoCreateOutline } from "react-icons/io5";
+import { CiSettings } from "react-icons/ci";
 
 const Sidebar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -72,10 +73,19 @@ const Sidebar = () => {
           <li>
             <Link
               href="/"
-              className="flex items-center space-x-2 mt-10 p-3 rounded-md hover:bg-gray-500 text-white"
+              className="flex items-center space-x-2 mt-32 p-3 rounded-md hover:bg-gray-500 text-white"
             >
               <FaHome className="h-5  w-5" />
               <span>Home</span>
+            </Link>
+          </li>
+          <li>
+            <Link
+              href="/"
+              className="flex items-center space-x-2  p-3 rounded-md hover:bg-gray-500 text-white"
+            >
+              <CiSettings className="h-5  w-5" />
+              <span>Setting</span>
             </Link>
           </li>
         </ul>

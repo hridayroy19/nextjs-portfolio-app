@@ -1,11 +1,12 @@
 import BlogForm from "@/components/blogCart/BlogForm";
 
 const CreatBLogpage = () => {
-    return (
-        <div className=" w-full mt-7 flex justify-center items-center h-screen ">
-            <BlogForm/>
-        </div>
-    );
+  return (
+    <div>
+      <p className="text-center text-2xl py-8"> Create Bloge</p>
+      <BlogForm />
+    </div>
+  );
 };
 
 export default CreatBLogpage;

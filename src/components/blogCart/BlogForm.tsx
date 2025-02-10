@@ -2,7 +2,7 @@ const BlogForm = () => {
     return (
       <div className=" px-4 py-4">
         <div className="max-w-screen-xl mx-auto">
-          <div className="bg-white/90 rounded-lg p-6 shadow-lg md:p-10">
+          <div className="bg-gray-300 rounded-lg p-6 shadow-lg md:p-10">
             <form className="space-y-6">
               {/* Name Input */}
               <div>
