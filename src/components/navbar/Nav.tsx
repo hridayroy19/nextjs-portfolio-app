@@ -3,13 +3,23 @@ import { navLinks } from "../../../constant/constant";
 import Link from "next/link";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { useEffect, useState } from "react";
+import { signOut } from "next-auth/react";
 
 //props type
-type props = {
+type Props = {
   openNav: () => void;
+  session: {
+    user?: {
+      name?: string | null;
+      email?: string | null;
+      image?: string | null;
+    };
+  } | null;
 };
 
-const Nav = ({ openNav }: props) => {
+const Nav = ({ openNav, session }: Props) => {
+  console.log(session);
+
   const [navBg, setNavBg] = useState(false);
 
   useEffect(() => {
@@ -48,12 +58,20 @@ const Nav = ({ openNav }: props) => {
           </div>
           {/* button */}
           <div className=" flex items-center space-x-4">
-            <Link href="/login">
-              {" "}
-              <button className=" text-white border-2 py-1 px-3 text-sm ">
-                LogIn
+            {session?.user ? (
+              <button
+                onClick={() => signOut()}
+                className="text-white bg-blue-950 border-2 py-1 px-3 text-sm"
+              >
+                Logout
               </button>
-            </Link>
+            ) : (
+              <Link href="/login">
+                <button className="text-white border-2 py-1 px-3 text-sm">
+                  Login
+                </button>
+              </Link>
+            )}
             {/* mobil devic menu icon */}
             <HiBars3BottomLeft
               onClick={openNav}

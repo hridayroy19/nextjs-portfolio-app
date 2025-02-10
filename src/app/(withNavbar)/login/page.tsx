@@ -1,3 +1,5 @@
+"use client";
+import { signIn } from "next-auth/react";
 import Link from "next/link";
 import { FaGoogle } from "react-icons/fa";
 
@@ -67,13 +69,19 @@ const page = () => {
               </p>
             </div>
 
-            <div className="mt-6">
-              <button className="w-full border flex py-2 px-4 justify-center items-center gap-2 rounded-full text-white bg-[#4285F4] hover:bg-blue-600 transition-all duration-200">
-                <FaGoogle className="text-[28px]" />
-                <span>Continue with Google</span>
-              </button>
-            </div>
+            <div className="mt-6"></div>
           </form>
+          <button
+            onClick={() =>
+              signIn("google", {
+                callbackUrl: "http://localhost:3000/dashboard",
+              })
+            }
+            className="w-full border flex py-2 px-4 justify-center items-center gap-2 rounded-full text-white bg-[#4285F4] hover:bg-blue-600 transition-all duration-200"
+          >
+            <FaGoogle className="text-[28px]" />
+            <span>Continue with Google</span>
+          </button>
         </div>
       </div>
     </div>

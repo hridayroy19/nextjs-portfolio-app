@@ -3,7 +3,18 @@ import { useState } from "react";
 import MobilNav from "./MobilNav";
 import Nav from "./Nav";
 
-const ResponsiveNav = () => {
+export type UserProps = {
+  user?: {
+    name?: string | null | undefined;
+    email?: string | null | undefined;
+    image?: string | null | undefined;
+  };
+};
+
+const ResponsiveNav = ({session}: {session: UserProps | null} ) => {
+  console.log(session);
+  
+
   const [showNav, setShowNav] = useState(false);
 
   const showNavHandeler = () => setShowNav(true);
@@ -11,7 +22,7 @@ const ResponsiveNav = () => {
 
   return (
     <div>
-      <Nav openNav={showNavHandeler} />
+      <Nav session={session} openNav={showNavHandeler} />
       <MobilNav showNav={showNav} closeNav={closeNavHandeler} />
     </div>
   );
