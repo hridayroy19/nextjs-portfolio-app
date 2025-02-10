@@ -2,7 +2,7 @@ import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contactpage = () => {
   return (
-    <div className=" bg-black justify-center lg:py-32 md:py-14 py-14 px-1 md:px-10 lg:px-20 flex w-full mx-auto">
+    <div className=" bg-[#141414] justify-center lg:py-32 md:py-14 py-14 px-1 md:px-10 lg:px-20 flex w-full mx-auto">
       <div className="flex flex-col lg:flex-row w-full mx-auto text-white min-h-screen p-6">
         {/* Form Section */}
         <div className="bg-[#1a091e] border  p-10 rounded-lg w-full lg:w-1/2">

@@ -131,6 +131,7 @@ export const blogs = [
       "Explore the key web development trends for 2024 and their impact on your business.",
     date: "August 18, 2024",
     image: "/images/b1.jpg",
+    category:"Programming"
   },
   {
     id: 2,

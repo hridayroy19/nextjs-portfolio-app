@@ -3,18 +3,20 @@ import React from "react";
 
 type props = {
   blog: {
-    id: number;
+    _id: string;
     title: string;
     summary: string;
     date: string;
-    image: string;
+    blog_image: string;
   };
 };
 const BlogCart = ({ blog }: props) => {
+  // console.log(blog,"single card");
+  
   return (
     <div className=" bg-indigo-950 rounded-md overflow-hidden">
       <Image
-        src={blog.image}
+        src={blog.blog_image}
         alt="images"
         width={250}
         height={250}

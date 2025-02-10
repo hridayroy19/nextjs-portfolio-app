@@ -18,7 +18,7 @@ type Props = {
 };
 
 const Nav = ({ openNav, session }: Props) => {
-  console.log(session);
+  // console.log(session);
 
   const [navBg, setNavBg] = useState(false);
 

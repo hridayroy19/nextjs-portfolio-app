@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { useState } from "react";
 import MobilNav from "./MobilNav";
 import Nav from "./Nav";
@@ -11,9 +11,8 @@ export type UserProps = {
   };
 };
 
-const ResponsiveNav = ({session}: {session: UserProps | null} ) => {
-  console.log(session);
-  
+const ResponsiveNav = ({ session }: { session: UserProps | null }) => {
+  // console.log(session);
 
   const [showNav, setShowNav] = useState(false);
 

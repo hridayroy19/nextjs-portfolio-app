@@ -1,95 +1,105 @@
+import { createBlog } from "@/utlis/actions/blogcreate";
+import Form from "next/form";
+
 const BlogForm = () => {
-    return (
-      <div className=" px-4 py-4">
-        <div className="max-w-screen-xl mx-auto">
-          <div className="bg-gray-300 rounded-lg p-6 shadow-lg md:p-10">
-            <form className="space-y-6">
-              {/* Name Input */}
-              <div>
-                <label htmlFor="name" className="text-gray-700 font-medium">
-                  Name
-                </label>
-                <input
-                  className="w-full mt-1 rounded-md border-gray-300 p-3 text-sm focus:ring-2 focus:ring-blue-500"
-                  placeholder="Enter your name"
-                  type="text"
-                  id="name"
-                />
-              </div>
-  
-              {/* Email & Phone */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
-                <div>
-                  <label htmlFor="email" className="text-gray-700 font-medium">
-                    Email
-                  </label>
-                  <input
-                    className="w-full mt-1 rounded-md border-gray-300 p-3 text-sm focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your email"
-                    type="email"
-                    id="email"
-                  />
-                </div>
-  
-                <div>
-                  <label htmlFor="phone" className="text-gray-700 font-medium">
-                    Phone
-                  </label>
-                  <input
-                    className="w-full mt-1 rounded-md border-gray-300 p-3 text-sm focus:ring-2 focus:ring-blue-500"
-                    placeholder="Enter your phone number"
-                    type="tel"
-                    id="phone"
-                  />
-                </div>
-              </div>
-  
-              {/* Radio Options */}
-              <div className="grid grid-cols-1 gap-4 sm:grid-cols-3">
-                {["Option 1", "Option 2", "Option 3"].map((option, index) => (
-                  <label
-                    key={index}
-                    className="flex items-center justify-center gap-2 cursor-pointer rounded-lg border border-gray-300 p-3 text-gray-700 hover:border-blue-500 transition focus:ring-2 focus:ring-blue-500"
-                  >
-                    <input
-                      className="hidden"
-                      type="radio"
-                      name="option"
-                      value={option}
-                    />
-                    <span className="text-sm">{option}</span>
-                  </label>
-                ))}
-              </div>
-  
-              {/* Message Textarea */}
-              <div>
-                <label htmlFor="message" className="text-gray-700 font-medium">
-                  Message
-                </label>
-                <textarea
-                  className="w-full mt-1 rounded-md border-gray-300 p-3 text-sm focus:ring-2 focus:ring-blue-500"
-                  placeholder="Write your message..."
-                  id="message"
-                  rows={4}
-                ></textarea>
-              </div>
-  
-              {/* Submit Button */}
-              <div className="mt-4 flex justify-center">
-                <button
-                  type="submit"
-                  className="w-full sm:w-auto rounded-lg bg-blue-600 px-6 py-3 font-medium text-white hover:bg-blue-700 transition"
-                >
-                  Send Enquiry
-                </button>
-              </div>
-            </form>
+  return (
+    <div className="flex items-center justify-center min-h-screen my-5">
+      <div className="w-full max-w-4xl bg-white shadow-lg rounded-lg p-6">
+        <Form action={createBlog}>
+          <h2 className="text-2xl font-semibold mb-6 text-blue-900 text-center">
+            Create Blog
+          </h2>
+          <div className="grid grid-cols-2 gap-6">
+            {/* Title */}
+            <div>
+              <label
+                htmlFor="title"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Title
+              </label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
+                placeholder="Enter blog title"
+              />
+            </div>
+            {/* Author Name */}
+            <div>
+              <label
+                htmlFor="category"
+                className="block text-sm font-medium text-gray-700"
+              >
+                category
+              </label>
+              <input
+                type="text"
+                name="category"
+                id="category"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
+                placeholder="Enter author name"
+              />
+            </div>
+            {/* Publish Date */}
+            <div>
+              <label
+                htmlFor="date"
+                className="block text-sm font-medium text-gray-700"
+              >
+                Publish Date
+              </label>
+              <input
+                type="date"
+                name="date"
+                id="date"
+                className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
+              />
+            </div>
           </div>
-        </div>
+          {/* Blog Image (URL Input) */}
+          <div className="my-5">
+            <label
+              htmlFor="blog_image"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Blog Image URL
+            </label>
+            <input
+              type="url"
+              id="blog_image"
+              name="blog_image"
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
+              placeholder="Paste image URL here"
+            />
+          </div>
+          {/* content */}
+          <div>
+            <label
+              htmlFor="content"
+              className="block text-sm font-medium text-gray-700"
+            >
+              Content
+            </label>
+            <textarea
+              id="content"
+              name="content"
+              rows={4}
+              className="mt-1 block w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500"
+              placeholder="Enter blog content"
+            ></textarea>
+          </div>
+          <button
+            type="submit"
+            className="mt-6 w-full bg-blue-900 text-white py-2 px-4 rounded-md hover:bg-teal-500 focus:outline-none focus:ring-2 focus:ring-blue-400"
+          >
+            Create
+          </button>
+        </Form>
       </div>
-    );
-  };
-  
-  export default BlogForm;
-  
+    </div>
+  );
+};
+
+export default BlogForm;
