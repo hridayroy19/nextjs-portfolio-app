@@ -63,11 +63,11 @@ const Sidebar = () => {
           </li>
           <li>
             <Link
-              href="/dashboard/settings"
+              href="/dashboard/message"
               className="flex items-center space-x-2 p-3 rounded-md hover:bg-gray-500 text-white"
             >
               <FaCog className="h-5 w-5" />
-              <span>Project Management</span>
+              <span> Message Management</span>
             </Link>
           </li>
           <li>

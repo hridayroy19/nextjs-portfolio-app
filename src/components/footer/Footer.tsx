@@ -1,9 +1,13 @@
+"use client";
 import Image from "next/image";
-
+import { motion } from "motion/react";
 const Footer = () => {
   return (
     <div className="bg-[#0f0715fb] ">
-      <div className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8">
+      <motion.div
+        animate={{ rotate: 360 }}
+        className="mx-auto max-w-5xl px-4 py-10 sm:px-6 lg:px-8"
+      >
         <div className="flex justify-center">
           <Image src="/images/log.png" alt="logo" width={100} height={50} />
         </div>
@@ -26,7 +30,7 @@ const Footer = () => {
         <p className="text-center mt-6 text-white text-xs sm:text-sm md:text-base">
           © 2025 All Rights Reserved by Hridoy Developer
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };

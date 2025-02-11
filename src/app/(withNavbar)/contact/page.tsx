@@ -1,3 +1,5 @@
+import { createMessage } from "@/utlis/actions/sendMessage";
+import Form from "next/form";
 import { FaPhoneAlt, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
 
 const Contactpage = () => {
@@ -13,39 +15,49 @@ const Contactpage = () => {
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea beatae
             quia excepturi corrupti repellendus. Aliquid!
           </p>
-          <form className="mt-6 space-y-4">
+          <Form action={createMessage} className="mt-6 space-y-4">
             <div className="flex gap-4">
               <input
                 type="text"
+                id="name"
+                name="name"
                 placeholder="First name"
                 className="w-1/2 p-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500"
               />
               <input
                 type="text"
+                id="lastname"
+                name="lastname"
                 placeholder="Last name"
                 className="w-1/2 p-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500"
               />
             </div>
             <div className="flex gap-4">
               <input
+              name="email"
+              id="email"
                 type="email"
                 placeholder="Email address"
                 className="w-1/2 p-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500"
               />
               <input
+              name="phone"
+              id="phone"
                 type="text"
                 placeholder="Phone Number"
                 className="w-1/2 p-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500"
               />
             </div>
             <textarea
+            name="message"
+            id="message"
               placeholder="Message"
               className="w-full p-2 bg-gray-900 border border-gray-700 rounded focus:outline-none focus:border-purple-500 h-32"
             ></textarea>
-            <button className="w-full p-3 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
+            <button type="submit" className="w-full p-3 bg-purple-600 text-white rounded hover:bg-purple-700 transition">
               Send Message
             </button>
-          </form>
+          </Form>
         </div>
 
         {/* text section */}

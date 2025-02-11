@@ -42,10 +42,12 @@ const Nav = ({ openNav, session }: Props) => {
     <div
       className={`fixed ${
         navBg ? "bg-[#240b39]" : "fixed"
-      } h-[12vh] z-[10] w-full transition-all duration-200 `}
+      } h-[12vh] z-[10] w-full transition-all  duration-200 `}
     >
       <div className=" flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto ">
-        <h1 className="text-2xl  text-white ml-[-1.5rem] sm:ml-0">HR ID AY</h1>
+        <h1 className="text-2xl py-2 text-white md:ml-[1.5rem] ml-3">
+          HR ID AY
+        </h1>
         <div className=" flex items-center space-x-10">
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((navlink) => {
