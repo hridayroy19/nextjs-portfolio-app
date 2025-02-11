@@ -6,56 +6,36 @@ export const BaseInfo = {
   profilePic: "/images/hero.png",
 };
 
-export const aboutInfo = {
-  title: "Crafting Web Application with Passion and Precision",
-  description:
-    "At webdev warriors, we’re a dedicated team of designers and developers committed to delivering tailored web solutions. With a blend of creativity and technical expertise, we help businesses elevate their online presence and achieve their goals",
-  client: "50+",
-  experience: "3+",
-  project: "200+",
-  website: "100+",
-};
-
 export const projectData = [
   {
     id: 1,
     image: "/images/p1.png",
-    url: "https://agency-opal-eight.vercel.app/",
+    url: "https://homifyestate-8556d.web.app/",
   },
   {
     id: 2,
     image: "/images/p2.png",
-    url: "https://burger-pearl.vercel.app/",
+    url: "https://collage-project-three.vercel.app/",
   },
   {
     id: 3,
     image: "/images/p3.png",
-    url: "https://game-ecommerce-yt.vercel.app/",
-  },
-  {
-    id: 4,
-    image: "/images/p4.png",
-    url: "https://elearning-yt.vercel.app/",
+    url: "https://food-app-e3026.web.app/",
   },
   {
     id: 5,
     image: "/images/p5.png",
-    url: "https://invest-peach.vercel.app/",
+    url: "https://brithday-partics.web.app/",
   },
   {
     id: 6,
     image: "/images/p6.png",
-    url: "https://job-chi-ruby.vercel.app/",
+    url: "https://book-shop-assignment4.vercel.app/",
   },
   {
     id: 7,
-    image: "/images/p7.png",
-    url: "https://wdw-ecom.vercel.app/",
-  },
-  {
-    id: 8,
     image: "/images/p8.png",
-    url: "https://webhost-ten.vercel.app/",
+    url: "https://tourmaline-dragon-9979f9.netlify.app/",
   },
 ];
 
@@ -131,7 +111,7 @@ export const blogs = [
       "Explore the key web development trends for 2024 and their impact on your business.",
     date: "August 18, 2024",
     image: "/images/b1.jpg",
-    category:"Programming"
+    category: "Programming"
   },
   {
     id: 2,

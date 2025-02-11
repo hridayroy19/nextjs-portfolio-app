@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 type props = {
@@ -12,7 +13,7 @@ type props = {
 };
 const BlogCart = ({ blog }: props) => {
   // console.log(blog,"single card");
-  
+
   return (
     <div className=" bg-indigo-950 rounded-md overflow-hidden">
       <Image
@@ -34,7 +35,7 @@ const BlogCart = ({ blog }: props) => {
         <p className="text-white text-xs flex justify-between mt-2">
           {blog.date}
           <span className="font-medium hover:bg-gray-500 border p-1 cursor-pointer text-[15px]">
-          Detailed
+            <Link href={`/blog/${blog._id}`}>Detailed</Link>
           </span>
         </p>
       </div>
