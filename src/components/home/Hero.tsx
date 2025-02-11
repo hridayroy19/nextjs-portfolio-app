@@ -25,7 +25,9 @@ const Hero = () => {
 
           {/* Download Button */}
           <button className="border flex justify-center items-center gap-2 mt-5 py-2 px-4 md:px-6 md:py-2.5 bg-blue-950 text-white font-semibold text-sm md:text-lg rounded-md">
-            Download CV
+            <a href="/resume.pdf" download className="flex items-center gap-2">
+              Resume
+            </a>
             <FaDownload />
           </button>
         </motion.div>

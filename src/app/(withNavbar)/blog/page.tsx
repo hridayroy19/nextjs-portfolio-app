@@ -2,7 +2,7 @@ import { Blog } from "@/components/blogCart/Blog";
 import BlogCart from "@/components/blogCart/BlogCart";
 
 const Blogepage = async () => {
-  const res = await fetch("http://localhost:5000/api/blog");
+  const res = await fetch("https://portfoli-server-three.vercel.app/api/blog");
   const { data: blogs } = await res.json();
 
   return (

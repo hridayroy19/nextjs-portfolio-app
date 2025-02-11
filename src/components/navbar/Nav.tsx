@@ -4,6 +4,7 @@ import Link from "next/link";
 import { HiBars3BottomLeft } from "react-icons/hi2";
 import { useEffect, useState } from "react";
 import { signOut } from "next-auth/react";
+import Image from "next/image";
 
 //props type
 type Props = {
@@ -45,9 +46,9 @@ const Nav = ({ openNav, session }: Props) => {
       } h-[12vh] z-[10] w-full transition-all  duration-200 `}
     >
       <div className=" flex items-center h-full justify-between w-[95%] sm:w-[90%] mx-auto ">
-        <h1 className="text-2xl py-2 text-white md:ml-[1.5rem] ml-3">
-          HR ID AY
-        </h1>
+        <div className="w-[110px]">
+        <Image src="/images/log.png" alt="logo" width={200} height={100} className="text-2xl py-2 text-white md:ml-[1.5rem] ml-3"/>
+        </div>
         <div className=" flex items-center space-x-10">
           <div className="hidden lg:flex items-center space-x-8">
             {navLinks.map((navlink) => {

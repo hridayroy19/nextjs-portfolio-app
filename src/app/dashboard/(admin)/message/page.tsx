@@ -12,7 +12,7 @@ interface MessageResponse {
 }
 
 const page = async () => {
-  const res = await fetch("http://localhost:5000/api/message");
+  const res = await fetch("https://portfoli-server-three.vercel.app/api/message");
   const message: MessageResponse = await res.json();
   console.log(message);
 

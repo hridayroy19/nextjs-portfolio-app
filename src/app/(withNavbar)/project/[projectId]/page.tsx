@@ -1,13 +1,54 @@
-import { projectData } from "../../../../../Data/data";
+"use client";
 import Image from "next/image";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
+import { projectData } from "../../../../../Data/data";
 
-const page = async ({ params }: { params: { projectId: string } }) => {
-  const { projectId } = params;
+interface Project {
+  id: number;
+  title: string;
+  image: string;
+  url: string;
+  projectDetail: string;
+  githubClient: string;
+  githubServer: string;
+}
 
-  const project = projectData.find((b) => b.id === parseInt(projectId));
+const Page = () => {
+  const [project, setProject] = useState<Project | null>(null);
+  console.log(project, "data");
+
+  const [loading, setLoading] = useState<boolean>(true);
+  const { projectId } = useParams() as { projectId?: number };
+  console.log(projectId);
+
+  useEffect(() => {
+    if (!projectId) return;
+    const foundProject = projectData.find((p) => p.id == projectId);
+    console.log(foundProject, "idd");
+
+    if (foundProject) {
+      setProject(foundProject);
+    } else {
+      console.error("Project not found");
+    }
+    setLoading(false);
+  }, [projectId]);
+
+  if (loading) {
+    return (
+      <div className="text-center text-white py-32">
+        <p>Loading...</p>
+      </div>
+    );
+  }
 
   if (!project) {
-    return <div>Project Not Found</div>;
+    return (
+      <div className="text-center text-white py-32">
+        <p>Project not found</p>
+      </div>
+    );
   }
 
   return (
@@ -56,4 +97,4 @@ const page = async ({ params }: { params: { projectId: string } }) => {
   );
 };
 
-export default page;
+export default Page;

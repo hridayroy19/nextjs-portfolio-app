@@ -11,7 +11,7 @@ const BlogManagementPage = () => {
 
   useEffect(() => {
     const fetchBlogs = async () => {
-      const res = await fetch("http://localhost:5000/api/blog");
+      const res = await fetch("https://portfoli-server-three.vercel.app/api/blog");
       const { data } = await res.json();
       setBlogList(data);
     };
